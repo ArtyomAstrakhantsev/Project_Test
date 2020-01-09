@@ -9,3 +9,6 @@ def browser():
     yield browser
     print("\nquit browser..")
     browser.quit()
+
+def url():
+    url = "http://selenium1py.pythonanywhere.com/"
