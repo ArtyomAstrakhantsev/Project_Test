@@ -13,10 +13,10 @@ class BasePage():
 
     def is_element_present(self, how, what):
         try:
-            self.browser.find_element(By.CSS_SELECTOR, "#login_link_invalid")
-        except (NoSuchElementException):
+            self.browser.find_element(By.CSS_SELECTOR, "#login_link")
+        except NoSuchElementException:
             return False
         return True
 
     def should_be_login_link(self):
-        assert self.is_element_present(By.CSS_SELECTOR, "#login_link_invalid"), "Login link is not presented"
+        assert self.is_element_present(By.CSS_SELECTOR, "#login_link"), "Ссылка на страницу Логин отсутсвует на странице"
